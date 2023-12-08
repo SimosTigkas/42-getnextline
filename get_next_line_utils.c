@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 08:54:12 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/05 14:03:13 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/08 08:37:25 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	append(t_list **list, char *buf)
 	if (new_node == NULL)
 		return ;
 	if (last_node == NULL)
-		last_node = *list;
+		*list = new_node;
 	else
 		last_node->next = new_node;
 	new_node->str_buf = buf;
