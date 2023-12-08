@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 08:49:38 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/08 09:03:07 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/08 11:53:40 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	clean_the_list(t_list **list)
 
 	buf = malloc(BUFFER_SIZE + 1);
 	clean_node = malloc(sizeof(t_list));
-	if (NULL == buf || NULL == clean_node)
+	if (buf == NULL || clean_node == NULL)
 		return ;
 	last_node = ft_lstlast(*list);
 	i = 0;
