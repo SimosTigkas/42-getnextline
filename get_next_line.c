@@ -6,11 +6,10 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 08:49:38 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/05 14:18:22 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/08 09:03:07 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//MAKE SURE NO LEAKS ARE INCLUDED IN YOUR PROJECT
 #include "get_next_line.h"
 
 char	*get_next_line(int fd)
