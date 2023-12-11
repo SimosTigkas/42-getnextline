@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:44 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/08 11:43:56 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:54:08 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_list
 
 char	*get_next_line(int fd);
 void	create_list(t_list	**list, int fd);
-void	append(t_list **list, char *buf, int fd);
+void	ft_append(t_list **list, char *buf, int fd);
 t_list	*ft_lstlast(t_list *lst);
 char	*get_line(t_list *list);
 void	cp_str(t_list *list, char *str);

@@ -6,16 +6,15 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:39 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/08 15:27:32 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:24:54 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
-#include <stdio.h>
 
 char	*get_next_line(int fd)
 {
-	static t_list	*list[4096];
+	static t_list	*list[4095];
 	char			*next_line;
 
 	if (fd < 0 || fd > 4095 || BUFFER_SIZE <= 0 || read(fd, &next_line, 0) < 0)

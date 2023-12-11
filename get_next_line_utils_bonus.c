@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:47 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/08 15:22:59 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:54:01 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	create_list(t_list	**list, int fd)
 			return ;
 		}
 		buf[char_read] = '\0';
-		append(list, buf, fd);
+		ft_append(list, buf, fd);
 	}
 }
 
@@ -42,7 +42,7 @@ t_list	*ft_lstlast(t_list *list)
 	return (list);
 }
 
-void	append(t_list **list, char *buf, int fd)
+void	ft_append(t_list **list, char *buf, int fd)
 {
 	t_list	*new_node;
 	t_list	*last_node;
