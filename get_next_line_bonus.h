@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:44 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/11 11:54:08 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:11:20 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <fcntl.h>
+# ifndef TOTAL_FDS
+#  define TOTAL_FDS 256
+# endif
+
 # include <stdlib.h>
 # include <unistd.h>
 

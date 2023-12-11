@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/04 08:49:58 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/11 10:29:36 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:11:09 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
 

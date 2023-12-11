@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:39 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/11 11:24:54 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/11 16:09:16 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 char	*get_next_line(int fd)
 {
-	static t_list	*list[4095];
+	static t_list	*list[TOTAL_FDS + 1];
 	char			*next_line;
 
-	if (fd < 0 || fd > 4095 || BUFFER_SIZE <= 0 || read(fd, &next_line, 0) < 0)
+	if (fd < 0 || fd > TOTAL_FDS || BUFFER_SIZE <= 0)
+		return (NULL);
+	if (read(fd, &next_line, 0) < 0)
 		return (NULL);
 	create_list(list, fd);
 	if (list[fd] == NULL)
