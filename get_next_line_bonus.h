@@ -6,7 +6,7 @@
 /*   By: stigkas <stigkas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 11:03:44 by stigkas           #+#    #+#             */
-/*   Updated: 2023/12/11 16:11:20 by stigkas          ###   ########.fr       */
+/*   Updated: 2023/12/13 09:51:27 by stigkas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 42
+#  define BUFFER_SIZE 24
 # endif
 
 # ifndef TOTAL_FDS
