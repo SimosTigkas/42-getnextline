@@ -21,22 +21,29 @@ Clone this repository:
    $ cd 42-getnextline
 ```
 ### Usage
+```
 #include "get_next_line.h"
 #include <fcntl.h> // Add this line for file control
 
-int main(void) {
-    int fd = open("example.txt", O_RDONLY);
-    char *line;
+int	main(void)
+{
+	int		fd;
+	char	*line;
+	int		lines;
 
-    while ((line = get_next_line(fd)) != NULL) {
-        printf("%s\n", line);
-        free(line);
-    }
-
-    close(fd);
-    return (0);
+	lines = 1;
+	fd = open("file.txt", O_RDONLY | O_CREAT);
+	printf("fd is %d\n", fd);
+   //write(fd, "your_text", int length_of your_text);
+	while ((line = get_next_line(fd)))
+	{
+		printf("%d->%s\n", lines++, line);
+		free(line);
+		line++;
+	}
+	return (0);
 }
-
+```
 ### Configuration
 **BUFFER_SIZE**: The size of the buffer for reading lines. Default is set to 24, but you can modify when you are compiling the program like this:
  ```
